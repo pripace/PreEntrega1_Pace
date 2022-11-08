@@ -1,0 +1,18 @@
+/*DEJO ESTA HOJA POR SI DEBO CAMBIAR LOS ESTILOS DE BOoots*/
+.listTittle {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+
+.cuerpoCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    margin: 10px 15px;
+}
