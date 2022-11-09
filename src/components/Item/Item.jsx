@@ -4,6 +4,8 @@ import ItemCount from './ItemCount';
 
 
 
+
+
 function Item(props) {
   return (
     <div className='card mb-3 border-primary' style={{width: '18rem'}}>
@@ -11,7 +13,7 @@ function Item(props) {
       <div className='card-body'>
         <h3 className='card-tittle'>{props.tittle}</h3>
         <p className='card-text'>{props.descripcion}</p>
-        <p className='card-text'>${props.price}</p>
+        <h6 className='card-text'>Precio: ${props.price}</h6>
       </div>
       <button className="btn btn-outline-primary">
         Ver más
@@ -22,7 +24,7 @@ function Item(props) {
       <button className="btn btn-outline-primary">
         Quitar
       </button>
-      <ItemCount stock={10}/>  
+      <ItemCount stock={props.stock}/>  
     </div>
 
 

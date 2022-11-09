@@ -1,6 +1,26 @@
-import Item from './Item';
-import Products from '../../data.js/data';
+import { useState, useEffect } from 'react';
+import getItems from '../../services/mockService';
+import ItemList from './ItemList';
 function ItemListContainer(props) {
+    const [products, setProducts] = useState([]);
+
+    async function getItemsAsync() {
+        let respuesta = await getItems();
+        setProducts(respuesta);
+      }
+    
+      useEffect(() => {
+        getItemsAsync();
+      }, []);
+
+/*     useEffect(
+        () => {
+            getItems().then((respuestaDatos) => {
+                setProducts(respuestaDatos)
+            });
+        },
+        []
+    ) */
 
     return (
         <div>
@@ -8,16 +28,7 @@ function ItemListContainer(props) {
                 <h1 className='listTittle'>{props.gretting}</h1>
             </div>
             <h3 className='listTittle'>Mis Productos</h3>
-            <div className='cuerpoCards'>
-                {Products.map((product) => {
-                    return (
-                        <Item img={product.img} tittle={product.nombre} price={product.precio}
-                            descripcion={product.descripcion} stock={product.stock} />
-                    )
-                }
-                )}
-
-            </div>
+            <ItemList products={products}/>
         </div>
     );
 }
