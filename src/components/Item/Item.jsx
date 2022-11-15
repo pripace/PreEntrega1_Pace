@@ -2,10 +2,6 @@ import React from 'react';
 import "./Item.css";
 import ItemCount from './ItemCount';
 
-
-
-
-
 function Item(props) {
   return (
     <div className='card mb-3 border-primary' style={{width: '18rem'}}>

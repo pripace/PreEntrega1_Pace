@@ -2,7 +2,6 @@ import React from 'react';
 import Item from './Item';
 import products from "../../data/data";
  
-
 function ItemList() {
   return (
     <div className='cuerpoCards'>

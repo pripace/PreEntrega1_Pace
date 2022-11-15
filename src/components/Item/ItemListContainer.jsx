@@ -13,15 +13,6 @@ function ItemListContainer(props) {
         getItemsAsync();
       }, []);
 
-/*     useEffect(
-        () => {
-            getItems().then((respuestaDatos) => {
-                setProducts(respuestaDatos)
-            });
-        },
-        []
-    ) */
-
     return (
         <div>
             <div>
@@ -34,3 +25,13 @@ function ItemListContainer(props) {
 }
 
 export default ItemListContainer;
+
+
+/*     useEffect(
+        () => {
+            getItems().then((respuestaDatos) => {
+                setProducts(respuestaDatos)
+            });
+        },
+        []
+    ) */
