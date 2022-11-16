@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function ItemDetail({product}) {
+function ItemDetail(product) {
     return (
         <div className='card mb-3 border-primary' style={{width: '18rem'}}>
             {<img className="card-img-top" src={product.img} alt={product.name} />}

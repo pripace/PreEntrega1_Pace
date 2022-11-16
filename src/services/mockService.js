@@ -9,10 +9,12 @@ function getItems() {
     });
 }
 
-export function getOneItem() {
+export function getOneItem(idParam) {
     return new Promise((resolve) => {
+        let itemSolicitado = products.find((item) => item.id === Number(idParam))
+
         setTimeout(() => {
-            resolve(products[0])
+            resolve(itemSolicitado);
         }, 2000);
     });
 }

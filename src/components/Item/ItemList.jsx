@@ -9,8 +9,9 @@ function ItemList() {
         return (
           <Item
             key={product.id}
+            id={product.id}
             img={product.img}
-            tittle={product.name}
+            title={product.name}
             price={product.price}
             descripcion={product.descripcion}
             stock={product.stock} />
