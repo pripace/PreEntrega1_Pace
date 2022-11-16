@@ -12,7 +12,7 @@ function ItemDetailContainer() {
     console.log(useParams());
 
 
-    async function getItemsAsync() {
+     async function getItemsAsync() {
         let respuesta = await getOneItem(id);
         setProduct(respuesta);
     }

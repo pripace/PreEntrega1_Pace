@@ -13,8 +13,8 @@ function Item(props) {
         <p className='card-text'>{props.descripcion}</p>
         <h6 className='card-text'>Precio: ${props.price}</h6>
       </div>
-      <Link className="btn btn-outline-primary" to={pageDetail}>
-        Ver más
+      <Link to={pageDetail}>
+       <h5> Ver más </h5>
       </Link>
        <button className="btn btn-primary"> Agregar</button> 
       <button className="btn btn-outline-primary">Quitar</button>
