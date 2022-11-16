@@ -1,7 +1,7 @@
 const products = 
 [{
     id: 1,
-    idCategoria: "práctica",
+    category: "practica",
     name: "Mat Ultra Resistente",
     descripcion: "Colchoneta para Yoga de TPE, 6mm, ecológico y duradero. No desgrana.",
     price: 10000,
@@ -11,7 +11,7 @@ const products =
 },
 {
     id: 2,
-    idCategoria: "práctica",
+    category: "practica",
     name: "Cubos",
     descripcion: "Ladrillo de goma eva, tamaño clásico. Viene x 2 unidades para complementar las posturas",
     price: 2000,
@@ -21,7 +21,7 @@ const products =
 },
 {
     id: 3,
-    idCategoria: "elementos",
+    category: "elementos",
     name: "Cintos",
     descripcion: "Elemento escencial para el correcto armado de posturas.",
     price: 1500,
@@ -31,7 +31,7 @@ const products =
 },
 {
     id: 4,
-    idCategoria: "meditación",
+    category: "meditacion",
     name: "Zafu De Meditación",
     descripcion: "Zafu de meditación 16 X 32 Cm. Doble funda. Relleno de cáscara de trigo.",
     price: 3500,
@@ -41,7 +41,7 @@ const products =
 },
 {
     id: 5,
-    idCategoria: "elementos",
+    category: "elementos",
     name: "Esfera",
     descripcion: "Esfera para trabajar distintos planos del cuerpo de forma segura.",
     price: 3500,
@@ -51,7 +51,7 @@ const products =
 },
 {
     id: 6,
-    idCategoria: "meditación",
+    category: "meditacion",
     name: "Kit Meditación",
     descripcion: "Kit de almohadilla para ojos, almohada cervical y almohadilla extra. Rellenas de semillas y lavanda.",
     price: 2800,
