@@ -1,17 +1,20 @@
 import { useState, useEffect } from 'react';
 import getItems from '../../services/mockService';
 import ItemList from './ItemList';
+import {useParams} from "react-router-dom";
+
 function ItemListContainer(props) {
     const [products, setProducts] = useState([]);
+    const {idCategory} = useParams();
 
     async function getItemsAsync() {
-        let respuesta = await getItems();
+        let respuesta = await getItems(idCategory);
         setProducts(respuesta);
       }
     
       useEffect(() => {
         getItemsAsync();
-      }, []);
+      }, [idCategory]);
 
     return (
         <div>

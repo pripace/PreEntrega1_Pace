@@ -12,7 +12,7 @@ function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarColor01">
           <ul className='navbar-nav me-aut'>
-            <li className='nav-item'><Link className='nav-link' to="/" ><h4>Inicio</h4></Link></li>
+            <li className='nav-item'><Link className='nav-link' to="/" ><h4>Principal</h4></Link></li>
             <li className="nav-item"><Link className='nav-link' to="/category/practica" >Práctica</Link></li>
             <li className="nav-item"><Link className='nav-link' to="/category/elementos" >Elementos</Link></li>
             <li className="nav-item"><Link className='nav-link' to="/category/meditacion" >Meditación</Link></li>

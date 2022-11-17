@@ -14,7 +14,8 @@ function ItemList() {
             title={product.name}
             price={product.price}
             descripcion={product.descripcion}
-            stock={product.stock} />
+            stock={product.stock}
+            category={product.category} />
         )
       }
       )}
