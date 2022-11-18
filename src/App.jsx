@@ -15,7 +15,7 @@ function App() {
     <NavBar />
       <Routes>
         <Route path='/' element={<ItemListContainer gretting="Compra Online"/>}/>
-        <Route path="/category/:id" element={<ItemListContainer/>}/>
+        <Route path="/category/:idCategory" element={<ItemListContainer/>}/>
         <Route path="/item/:id" element={<ItemDetailContainer/>}/>
         <Route path="*" element={<h2>Esta página no existe. Revisa la ruta o vuelve al inicio. (Error 404)</h2>}/>
       

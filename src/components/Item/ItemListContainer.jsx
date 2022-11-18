@@ -30,11 +30,4 @@ function ItemListContainer(props) {
 export default ItemListContainer;
 
 
-/*     useEffect(
-        () => {
-            getItems().then((respuestaDatos) => {
-                setProducts(respuestaDatos)
-            });
-        },
-        []
-    ) */
+

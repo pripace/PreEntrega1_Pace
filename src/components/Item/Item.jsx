@@ -7,9 +7,9 @@ function Item(props) {
   const pageDetail = `/item/${props.id}`;
   return (
     <div className='card mb-3 border-primary' style={{width: '18rem'}}>
-      <img className="card-img-top" src={props.img} alt={props.tittle} />
+      <img className="card-img-top" src={props.img} alt={props.title} />
       <div className='card-body'>
-        <h3 className='card-tittle'>{props.tittle}</h3>
+        <h3 className='card-tittle'>{props.title}</h3>
         <p className='card-text'>{props.descripcion}</p>
         <h6 className='card-text'>Precio: ${props.price}</h6>
       </div>
