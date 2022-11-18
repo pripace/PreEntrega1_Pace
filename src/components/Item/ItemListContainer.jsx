@@ -7,14 +7,14 @@ function ItemListContainer(props) {
     const [products, setProducts] = useState([]);
     const {idCategory} = useParams();
 
-    async function getItemsAsync() {
-        let respuesta = await getItems(idCategory);
-        setProducts(respuesta);
-      }
-    
-      useEffect(() => {
-        getItemsAsync();
-      }, [idCategory]);
+    useEffect(() => {
+        async function getItemsAsync() {
+           let respuesta = await getItems(idCategory);
+           setProducts(respuesta);
+         }
+   
+           getItemsAsync();
+         }, [idCategory]);
 
     return (
         <div>
