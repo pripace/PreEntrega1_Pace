@@ -1,8 +1,8 @@
 import React from 'react';
 import Item from './Item';
-import products from "../../data/data";
+
  
-function ItemList() {
+function ItemList({products}) {
   return (
     <div className='cuerpoCards'>
       {products.map((product) => {
