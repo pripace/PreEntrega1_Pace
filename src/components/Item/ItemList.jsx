@@ -15,7 +15,8 @@ function ItemList({products}) {
             price={product.price}
             descripcion={product.descripcion}
             stock={product.stock}
-            idCategory={product.category} />
+            idCategory={product.category}
+            regalo={product.regalo} />
         )
       }
       )}

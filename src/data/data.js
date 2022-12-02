@@ -6,7 +6,8 @@ const products =
     descripcion: "Colchoneta para Yoga de TPE, 6mm, ecológico y duradero. No desgrana.",
     price: 10000,
     stock: 30,
-    img: "img/mat.jpg"
+    img: "img/mat.jpg",
+    regalo: "bolso de regalo!"
 
 },
 {
@@ -45,7 +46,7 @@ const products =
     name: "Esfera",
     descripcion: "Esfera para trabajar distintos planos del cuerpo de forma segura.",
     price: 3500,
-    stock: 8,
+    stock: 0,
     img: "img/esfera.jpg"
 
 },
@@ -56,7 +57,8 @@ const products =
     descripcion: "Kit de almohadilla para ojos, almohada cervical y almohadilla extra. Rellenas de semillas y lavanda.",
     price: 2800,
     stock: 12,
-    img: "img/kit.jpg"
+    img: "img/kit.jpg",
+    regalo: "bolsita para guardar!"
 
 }
 ]

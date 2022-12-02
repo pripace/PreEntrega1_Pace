@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function ItemCount({stock, onAdd}) {  //ver aca SI ES ASI O CON LLAVES
+function ItemCount({stock, onAdd}) {  
 
   let [count, setCount] = useState(1)
 
