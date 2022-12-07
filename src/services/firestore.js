@@ -1,33 +1,60 @@
 import { initializeApp } from "firebase/app";
-import {getFirestore, collection, getDocs} from "firebase/firestore";
+import { getFirestore, collection, getDocs, doc, getDoc, query, where } from "firebase/firestore";
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyDZznZZ9fVLhhxk29rz1r60yv4ES_5GB70",
-    authDomain: "latienditadeyoga.firebaseapp.com",
-    projectId: "latienditadeyoga",
-    storageBucket: "latienditadeyoga.appspot.com",
-    messagingSenderId: "270291959230",
-    appId: "1:270291959230:web:b34dc3dd6562478caa0def"
-  };
+  apiKey: "AIzaSyDHaIYxGrOp5Rd2QCuoxryq-hGa8ccy4S0",
+  authDomain: "tienda-yogui.firebaseapp.com",
+  projectId: "tienda-yogui",
+  storageBucket: "tienda-yogui.appspot.com",
+  messagingSenderId: "719295741521",
+  appId: "1:719295741521:web:e9707171542ba067900270"
+};
 
-
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-//1 Inicializo Firestore
- const DB = getFirestore(app);
+const DB = getFirestore(app);
 
-//2 traigo todos los docs
+// traer todos los docs
 export default async function getItems() {
-  //2 referencio colección
+
   const colectionProductsRef = collection(DB, "products");
-  //4 solicitamos todos los docs de la colección
+
   const documentSnapshot = await getDocs(colectionProductsRef);
 
-  const documentsData = documentSnapshot.docs.map((doc) => {
+  const documentsData = documentSnapshot.docs.map( (doc) => {
     return {
       ...doc.data(),
-      id: doc.id,
-    };
-  });
-
+      id: doc.id
+    }
+  })
   return documentsData;
-} 
+  
+}
+
+// traer un doc x id
+export async function getOneItem(idParams){
+
+  const docRef = doc(DB, "products", idParams);
+  const docSnapshot = await getDoc(docRef);
+
+  return {
+    ...docSnapshot.data(),
+    id: docSnapshot.id
+  }
+}
+
+// traer todos los docs segun la category
+export async function getItemsCategory(categoryParams) {
+  const collectionRef = collection(DB, "products");
+  const q = query(collectionRef, where("category", "==", categoryParams));
+  const documentSnapshot = await getDocs(q);
+
+  const documentsData = documentSnapshot.docs.map( (doc) => {
+    return {
+      ...doc.data(),
+      id: doc.id
+    }
+  })
+  return documentsData;
+}

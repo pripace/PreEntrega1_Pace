@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getOneItem } from "../../services/mockService";
+import { getOneItem } from "../../services/firestore";
 import ItemDetail from './ItemDetail';
 import { Ping } from '@uiball/loaders'
 import { useParams } from "react-router-dom";
