@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import { cartContext } from '../../context/cartContext';
-import { createOrder, exportToFirestore } from '../../services/firestore';
+import { createOrder } from '../../services/firestore';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import "./CartCheck.css";
+import FormCheckOut from './FormCheckOut';
 
 function CartCheck() {  //cartView del profe
   const { cart, clear, removeItem, priceInCart } = useContext(cartContext);
@@ -11,18 +12,14 @@ function CartCheck() {  //cartView del profe
 
   if (cart.length === 0)
     return (
-      <div className='mensaje' style={{padding: 40, textAlign: "left"}}>
+      <div className='mensaje' style={{ padding: 40, textAlign: "left" }}>
         <h3>No has agregado nada aun!</h3>
       </div>
     );
 
-  async function checkOut(e) {  //orden de compras
+  async function checkOut(e, data) {  //orden de compras
     const order = {
-      buyer: {
-        name: "Pri",
-        email: "pri@react.com",
-        phone: "3511112222",
-      },
+      buyer: data,
       items: cart,
       total: priceInCart(),
       date: new Date(),
@@ -31,7 +28,7 @@ function CartCheck() {  //cartView del profe
     const orderId = await createOrder(order);
     //AGREGAR ALLLLGO
     navigate(`/thankyou/${orderId}`)
-    
+
     Swal.fire({
       title: `Gracias por adquirir nuestros productos!`,
       text: `Tu código de orden es "${orderId}"`,
@@ -54,8 +51,9 @@ function CartCheck() {  //cartView del profe
               <button onClick={() => removeItem(item.id)} className='btn btn-outline-primary'>Quitar</button>
             </div>
           ))}
+        <FormCheckOut onSubmit={checkOut} />
         <div className='contButton'>
-          <button onClick={checkOut} className='btn btn-outline-primary'>Finalizar compra</button>
+
           <button onClick={() => clear(cart)} className='btn btn-outline-primary'>Eliminar todos</button>
         </div>
       </div>
