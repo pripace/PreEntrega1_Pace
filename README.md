@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Tienda Online Productos de Yoga con React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto del curso/carrera de React Js de Coder House, comisión 34815. Tienda online con React App.
+Aprendiendo y aplicando React Js desde 0 hasta la utilización de base de datos con Firebase. 
+Subido y compartido en GitHub. 
+Utilice Boostwatch para los styles.
+SweetAlert2 para finalizar la compra y mostrar el código. 
 
 ## Available Scripts
 

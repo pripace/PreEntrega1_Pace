@@ -15,8 +15,6 @@ function ItemCount({ stock, onAdd }) {
   }
 
   //AGREGA AL CARRITO
-
-
   return (
 
     <div className="list-group-item d-flex justify-content-between align-items-center">

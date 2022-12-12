@@ -1,4 +1,3 @@
-
 import ItemCount from "../Item/ItemCount";
 import { useContext, useState } from "react";
 import { cartContext } from "../../context/cartContext";
@@ -25,17 +24,17 @@ function ItemDetail({ product }) {
                     <p className='card-text'>{product.descripcion}</p>
                     <h6 className='card-text'>Precio ${product.price}</h6>
                 </div>
-                { 
-                isInCart?           
-                (
-                <Link to="/cart">
-                <button className="btn btn-outline-primary">Mi Compra</button>
-                </Link>
-                )
-                :
-                (
-                <ItemCount onAdd={onAdd} stock={product.stock} />
-                )
+                {
+                    isInCart ?
+                        (
+                            <Link to="/cart">
+                                <button className="btn btn-outline-primary">Mi Compra</button>
+                            </Link>
+                        )
+                        :
+                        (
+                            <ItemCount onAdd={onAdd} stock={product.stock} />
+                        )
                 }
             </div>
         </div>

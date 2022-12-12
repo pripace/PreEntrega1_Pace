@@ -44,11 +44,11 @@ export function CartContextProvider({ children }) {
     function priceInCart() {
         let totalPrice = 0;
         cart.forEach(
-          (product) =>
-            (totalPrice = totalPrice + product.price * product.count)
+            (product) =>
+                (totalPrice = totalPrice + product.price * product.count)
         );
         return totalPrice;
-      };
+    };
 
     //3 retorna el provider del context creado
     //4 pasamos prop value a las variables que quiero hacer visibles

@@ -29,7 +29,7 @@ function ItemDetailContainer() {
         return (<Ping size={100} speed={2} color="pink" />);
 
     return (
-  
+
         <ItemDetail product={product} />
 
     )

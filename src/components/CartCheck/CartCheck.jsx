@@ -38,7 +38,6 @@ function CartCheck() {  //cartView del profe
   };
 
   return (
-
     <div className='cart-container'>
       <div className='cart-item-list'>
         {
@@ -51,11 +50,13 @@ function CartCheck() {  //cartView del profe
               <button onClick={() => removeItem(item.id)} className='btn btn-outline-primary'>Quitar</button>
             </div>
           ))}
-        <FormCheckOut onSubmit={checkOut} />
-        <div className='contButton'>
 
+        <FormCheckOut onSubmit={checkOut} />
+
+        <div className='contButton'>
           <button onClick={() => clear(cart)} className='btn btn-outline-primary'>Eliminar todos</button>
         </div>
+
       </div>
     </div>
   )

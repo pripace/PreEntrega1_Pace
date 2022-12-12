@@ -12,7 +12,7 @@ function CartWidget() {
     <Link to="/cart">
       <li className="nav-item">
         <button className='btn btn-primary'><i className="fas fa-shopping-cart">
-          <span>{(miContext.cartItems()===0) || <small style={{color: "pink"}}> {miContext.cartItems()} </small>} </span>
+          <span>{(miContext.cartItems() === 0) || <small style={{ color: "pink" }}> {miContext.cartItems()} </small>} </span>
         </i></button>
       </li>
     </Link>

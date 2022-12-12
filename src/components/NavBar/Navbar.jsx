@@ -1,6 +1,6 @@
 import React from 'react';
 import CartWidget from './CartWidget';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 function Navbar() {
@@ -16,7 +16,7 @@ function Navbar() {
             <li className="nav-item"><Link className='nav-link' to="/category/practica" >Práctica</Link></li>
             <li className="nav-item"><Link className='nav-link' to="/category/elementos" >Elementos</Link></li>
             <li className="nav-item"><Link className='nav-link' to="/category/meditacion" >Meditación</Link></li>
-           <CartWidget />
+            <CartWidget />
           </ul>
         </div>
       </div>
