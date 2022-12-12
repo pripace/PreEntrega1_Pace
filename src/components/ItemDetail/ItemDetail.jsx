@@ -13,7 +13,6 @@ function ItemDetail({ product }) {
 
     function onAdd(count) {
         setIsInCart(count);
-        alert(`${count} x ${product.name} agregado al carrito :)`);
         addItem(product, count)
     }
 

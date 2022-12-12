@@ -1,33 +1,29 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
-function ItemCount({stock, onAdd}) {  
+function ItemCount({ stock, onAdd }) {
 
   let [count, setCount] = useState(1)
 
-  function handleSum(){
+  function handleSum() {
     if (count < stock)
-    setCount(count+1);
+      setCount(count + 1);
   }
 
-  function handleRest(){
+  function handleRest() {
     if (count > 1)
-    setCount(count-1);
+      setCount(count - 1);
   }
 
   //AGREGA AL CARRITO
 
 
   return (
- 
+
     <div className="list-group-item d-flex justify-content-between align-items-center">
       <button className="btn btn-outline-primary" onClick={handleRest}>-</button>
       <span>{count}</span>
       <button className="btn btn-outline-primary" onClick={handleSum}>+</button>
-
-      <button className="btn btn-primary" onClick={() => onAdd(count)}>Agregar</button>
-
-      <button className="btn btn-outline-primary">Quitar</button>
-
+      <button className="btn btn-primary contButton" onClick={() => onAdd(count)}>Agregar</button>
     </div>
 
   )

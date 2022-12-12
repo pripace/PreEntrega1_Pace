@@ -17,7 +17,7 @@ function Item(props) {
         {props.stock <= 0 && <small>sin stock</small>}
       </div>
       <Link to={pageDetail}>
-       <h5 className='btn btn-primary'> Ver más </h5>
+       <h5 className='btn btn-primary contButton' > Ver más </h5>
       </Link>
 
 

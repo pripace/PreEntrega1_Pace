@@ -8,6 +8,7 @@ import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartContextProvider } from "./context/cartContext";
 import CartCheck from "./components/CartCheck/CartCheck";
+import CheckOutCarrito from "./components/CheckOutCarrito/CheckOutCarrito";
 
 
 
@@ -19,11 +20,15 @@ function App() {
         <BrowserRouter>
           <NavBar />
           <Routes>
-            <Route path='/' element={<ItemListContainer gretting="Compra Online" />} />
+            <Route path='/' element={<ItemListContainer gretting="Tu Tiendita De Yoga" />} />
             <Route path="/category/:idCategory" element={<ItemListContainer />} />
             <Route path="/item/:id" element={<ItemDetailContainer />} />
-            <Route path="/cart" element={<CartCheck/>}/>
-            <Route path="*" element={<h2>Esta página no existe. Revisa la ruta o vuelve al inicio. (Error 404)</h2>} />
+            <Route path="/cart" element={<CartCheck />} />
+            <Route path="/thankyou/:idOrder" element={<CheckOutCarrito />} />
+            <Route path="*" element={<h2 style={{
+              padding: 40,
+              textAlign: "left",
+            }}>Esta página no existe. Revisa la ruta o vuelve al inicio. (Error 404)</h2>} />
           </Routes>
         </BrowserRouter>
       </CartContextProvider>

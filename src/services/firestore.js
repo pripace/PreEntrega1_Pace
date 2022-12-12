@@ -1,5 +1,16 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs, doc, getDoc, query, where } from "firebase/firestore";
+import {
+  initializeApp
+} from "firebase/app";
+import {
+  getFirestore,
+  collection,
+  getDocs,
+  doc,
+  getDoc,
+  query,
+  where,
+  addDoc
+} from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -22,18 +33,18 @@ export default async function getItems() {
 
   const documentSnapshot = await getDocs(colectionProductsRef);
 
-  const documentsData = documentSnapshot.docs.map( (doc) => {
+  const documentsData = documentSnapshot.docs.map((doc) => {
     return {
       ...doc.data(),
       id: doc.id
     }
   })
   return documentsData;
-  
+
 }
 
 // traer un doc x id
-export async function getOneItem(idParams){
+export async function getOneItem(idParams) {
 
   const docRef = doc(DB, "products", idParams);
   const docSnapshot = await getDoc(docRef);
@@ -50,7 +61,7 @@ export async function getItemsCategory(categoryParams) {
   const q = query(collectionRef, where("category", "==", categoryParams));
   const documentSnapshot = await getDocs(q);
 
-  const documentsData = documentSnapshot.docs.map( (doc) => {
+  const documentsData = documentSnapshot.docs.map((doc) => {
     return {
       ...doc.data(),
       id: doc.id
@@ -58,3 +69,23 @@ export async function getItemsCategory(categoryParams) {
   })
   return documentsData;
 }
+
+// enviar orden a firebase
+export async function createOrder(order) {
+  const ordersCollection = collection(DB, "orders");
+  const docOrder = await addDoc(ordersCollection, order);
+  return (docOrder.id);
+}
+
+/* async function exportToFirestore(){
+  const products = [];
+
+  const collectionRef = collection(DB, "products");
+ 
+  for (let item of products){
+    item.index = item.id;
+    delete item.id;
+    let docOrder = await addDoc(collectionRef, item)
+    console.log("documento creado id:", docOrder.id)
+  }
+} */
