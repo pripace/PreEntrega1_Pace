@@ -26,7 +26,7 @@ function CartCheck() {  //cartView del profe
     }
 
     const orderId = await createOrder(order);
-    //AGREGAR ALLLLGO
+
     navigate(`/thankyou/${orderId}`)
 
     Swal.fire({
