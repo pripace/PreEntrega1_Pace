@@ -31,7 +31,7 @@ function CartCheck() {  //cartView del profe
 
     Swal.fire({
       title: `Gracias por adquirir nuestros productos!`,
-      text: `Tu código de orden es "${orderId}"`,
+      text: `Tu código de orden es "${orderId}" y el total es: $${priceInCart()}.`,
       icon: 'success',
     })
     clear();
