@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function ItemCount({ stock, onAdd }) {
 
-  let [count, setCount] = useState(1)
+  let [count, setCount] = useState(0)
 
   function handleSum() {
     if (count < stock)
@@ -21,7 +21,7 @@ function ItemCount({ stock, onAdd }) {
       <button className="btn btn-outline-primary" onClick={handleRest}>-</button>
       <span>{count}</span>
       <button className="btn btn-outline-primary" onClick={handleSum}>+</button>
-      <button className="btn btn-primary contButton" onClick={() => onAdd(count)}>Agregar</button>
+      <button className="btn btn-primary contButton" disabled={stock <= 0} onClick={() => onAdd(count)}>Agregar</button>
     </div>
 
   )

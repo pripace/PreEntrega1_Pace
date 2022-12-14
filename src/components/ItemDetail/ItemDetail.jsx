@@ -8,12 +8,15 @@ import { Link } from "react-router-dom";
 
 function ItemDetail({ product }) {
     const [isInCart, setIsInCart] = useState(false);
-    const { addItem } = useContext(cartContext);
+    const { addItem, cart } = useContext(cartContext);
 
     function onAdd(count) {
         setIsInCart(count);
         addItem(product, count)
     }
+
+    let itemInContext = cart.find((itemInCart) => itemInCart.id == product.id);
+    let stockUpdate = itemInContext !==undefined? product.stock - itemInContext.count : product.stock;
 
     return (
         <div className="itemCards">
@@ -33,7 +36,7 @@ function ItemDetail({ product }) {
                         )
                         :
                         (
-                            <ItemCount onAdd={onAdd} stock={product.stock} />
+                            <ItemCount onAdd={onAdd} stock={stockUpdate} />
                         )
                 }
             </div>
