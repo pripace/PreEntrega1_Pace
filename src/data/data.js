@@ -13,7 +13,7 @@ const products = [{
         id: 2,
         category: "practica",
         name: "Cubos",
-        descripcion: "Ladrillo de goma eva, tamaño clásico. Viene x 2 unidades para complementar las posturas",
+        descripcion: "Ladrillo de corcho, tamaño clásico. Viene x 2 unidades para complementar las posturas.",
         price: 2000,
         stock: 15,
         img: "img/cubo.jpg"
@@ -58,6 +58,27 @@ const products = [{
         stock: 12,
         img: "img/kit.jpg",
         regalo: "bolsita para guardar!"
+
+    },
+    {
+        id: 7,
+        category: "practica",
+        name: "Mat de Corcho",
+        descripcion: "Colchoneta para Yoga de Corcho, 6mm, ecológico y duradero. No desgrana. Hiper liviano.",
+        price: 12000,
+        stock: 10,
+        img: "img/matCorcho.jpg",
+        regalo: "bolso de regalo!"
+
+    },
+    {
+        id: 8,
+        category: "meditacion",
+        name: "Bolster",
+        descripcion: "Almohadon para meditación y ayuda para practicantes con limitaciones.",
+        price: 8000,
+        stock: 5,
+        img: "img/bolster.jpg",
 
     }
 ]
