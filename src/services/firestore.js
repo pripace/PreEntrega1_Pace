@@ -9,7 +9,7 @@ import {
   getDoc,
   query,
   where,
-  addDoc
+  addDoc,
 } from "firebase/firestore";
 
 // Your web app's Firebase configuration

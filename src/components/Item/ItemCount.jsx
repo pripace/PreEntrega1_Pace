@@ -10,7 +10,7 @@ function ItemCount({ stock, onAdd }) {
   }
 
   function handleRest() {
-    if (count > 1)
+    if (count > 0)
       setCount(count - 1);
   }
 
