@@ -9,7 +9,7 @@ function ItemListContainer(props) {
 
     const { idCategory } = useParams();
 
-    const loader = <Metronome size={100} speed={1.6} color="pink" />;
+    const loader = <Metronome size={100} speed={1.6} color="pink"/>;
 
     useEffect(() => {
         async function getItemsAsync() {
